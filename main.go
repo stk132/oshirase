@@ -19,6 +19,9 @@ func main() {
 		"message": func() (cli.Command, error) {
 			return &Message{}, nil
 		},
+		"channel": func() (cli.Command, error) {
+			return &Channel{}, nil
+		},
 		"group": func() (cli.Command, error) {
 			return &Group{}, nil
 		},
