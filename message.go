@@ -24,7 +24,7 @@ func (m *Message) Run(args []string) int {
 	)
 	f := flag.NewFlagSet(os.Args[0], flag.ExitOnError)
 	f.StringVar(&channelID, "c", "", "channelID")
-	f.StringVar(&user, "u", "slacker", "user name")
+	f.StringVar(&user, "u", appName(), "userName")
 	f.Parse(args)
 
 	msg := f.Arg(0)

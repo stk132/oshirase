@@ -12,6 +12,10 @@ func client() *slack.Slack {
 	return slack.New(os.Getenv("SLACK_API_TOKEN"))
 }
 
+func appName() string {
+	return "oshirase"
+}
+
 func main() {
 	c := cli.NewCLI("oshirase", "0.0.1")
 	c.Args = os.Args[1:]
