@@ -14,7 +14,7 @@ type Message struct {
 }
 
 func (m *Message) Help() string {
-	return "oshirase message -c <channelID> -u <username> <message>"
+	return "oshirase message -c <channelID> -u <username> <message>\nor\necho <some message> | oshirase message -c <channelID> -u <username>"
 }
 
 func (m *Message) Run(args []string) int {
