@@ -8,7 +8,7 @@ import (
 type Channel struct{}
 
 func (c *Channel) Help() string {
-	return "hogehoge"
+	return "slacker channel"
 }
 
 func (c *Channel) Run(args []string) int {
@@ -29,5 +29,5 @@ func (c *Channel) Run(args []string) int {
 }
 
 func (c *Channel) Synopsis() string {
-	return "show channel infomation"
+	return "show channelName channelID"
 }

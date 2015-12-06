@@ -8,7 +8,7 @@ import (
 type Group struct{}
 
 func (g *Group) Help() string {
-	return "hogehoge"
+	return "slacker group"
 }
 
 func (g *Group) Run(args []string) int {
@@ -32,5 +32,5 @@ func (g *Group) Run(args []string) int {
 }
 
 func (g *Group) Synopsis() string {
-	return "show group list"
+	return "show groupName, gruopID"
 }
