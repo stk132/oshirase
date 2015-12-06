@@ -13,7 +13,7 @@ func client() *slack.Slack {
 }
 
 func main() {
-	c := cli.NewCLI("slacker", "0.0.1")
+	c := cli.NewCLI("oshirase", "0.0.1")
 	c.Args = os.Args[1:]
 	c.Commands = map[string]cli.CommandFactory{
 		"message": func() (cli.Command, error) {

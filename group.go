@@ -8,7 +8,7 @@ import (
 type Group struct{}
 
 func (g *Group) Help() string {
-	return "slacker group"
+	return "oshirase group"
 }
 
 func (g *Group) Run(args []string) int {

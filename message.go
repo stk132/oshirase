@@ -13,7 +13,7 @@ type Message struct {
 }
 
 func (m *Message) Help() string {
-	return "slacker message -c <channelID> -u <username> <message>"
+	return "oshirase message -c <channelID> -u <username> <message>"
 }
 
 func (m *Message) Run(args []string) int {

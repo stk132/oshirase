@@ -8,7 +8,7 @@ import (
 type Channel struct{}
 
 func (c *Channel) Help() string {
-	return "slacker channel"
+	return "oshirase channel"
 }
 
 func (c *Channel) Run(args []string) int {
