@@ -32,7 +32,7 @@ func (m *Message) Run(args []string) int {
 		fmt.Fprintln(os.Stderr, "error: channelID is required")
 		return 1
 	}
-	api := Client()
+	api := client()
 	param := slack.PostMessageParameters{}
 	param.Username = user
 	_, _, err := api.PostMessage(channelID, msg, param)

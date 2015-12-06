@@ -8,7 +8,7 @@ import (
 	"github.com/nlopes/slack"
 )
 
-func Client() *slack.Slack {
+func client() *slack.Slack {
 	return slack.New(os.Getenv("SLACK_API_TOKEN"))
 }
 
@@ -30,18 +30,5 @@ func main() {
 	}
 
 	os.Exit(exitStatus)
-	// api := slack.New(os.Getenv("SLACK_API_TOKEN"))
-	// param := slack.PostMessageParameters{}
-	// param.Username = "shimabukuro"
-	// api.PostMessage("hogehoge", "hogehoge", param)
-	// groups, err := api.GetGroups(false)
-	// if err != nil {
-	// 	fmt.Fprintf(os.Stderr, err.Error())
-	// 	os.Exit(1)
-	// }
-	//
-	// for _, group := range groups {
-	// 	fmt.Printf("groupName: %s, id: %s \n", group.Name, group.Id)
-	// }
 
 }
