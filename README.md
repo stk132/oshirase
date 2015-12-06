@@ -1,23 +1,31 @@
-# slacker
+# oshirase
 
-simple slack cli command
+oshirase is very simple slack cli command
+
+## configuration
+
+please set below environment variable
+
+``` shell
+export SLACK_API_TOKEN=<your slack api token>
+```
 
 ## usage
 
 post message
 
 ``` shell
-slacker message -c <channelID or groupID> -u <username> <message>
+oshirase message -c <channelID or groupID> -u <username> <message>
 ```
 
 show channel information(channelName, ID)
 
 ``` shell
-slacker channel
+oshirase channel
 ```
 
 show group (groupName, ID)
 
 ``` shell
-slacker group
+oshirase group
 ```
