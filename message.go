@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"os"
 
 	"github.com/nlopes/slack"
@@ -27,6 +28,18 @@ func (m *Message) Run(args []string) int {
 	f.Parse(args)
 
 	msg := f.Arg(0)
+	if msg == "" {
+		buf, err := ioutil.ReadAll(os.Stdin)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err.Error())
+			return 1
+		}
+		if len(buf) == 0 {
+			fmt.Fprintln(os.Stderr, "error: please input message")
+			return 1
+		}
+		msg = string(buf)
+	}
 
 	if channelID == "" {
 		fmt.Fprintln(os.Stderr, "error: channelID is required")
