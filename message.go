@@ -48,6 +48,7 @@ func (m *Message) Run(args []string) int {
 	api := client()
 	param := slack.PostMessageParameters{}
 	param.Username = user
+	param.LinkNames = 1
 	_, _, err := api.PostMessage(channelID, msg, param)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, err.Error())
