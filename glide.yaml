@@ -1,0 +1,5 @@
+package: github.com/stk132/oshirase
+import:
+- package: github.com/mitchellh/cli
+- package: github.com/nlopes/slack
+  version: ^0.0.1

@@ -1,2 +1,0 @@
-gom "github.com/nlopes/slack", :tag => "v0.0.1"
-gom "github.com/mitchellh/cli"
