@@ -1,0 +1,26 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    GOPATH: "/go"
+
+phases:
+  install:
+    commands:
+      - mkdir -p $GOPATH/{bin,src}
+      - curl https://glide.sh/get | sh
+  pre-build:
+    commands:
+      - PATH=$PATH:$GOPATH/bin
+  build:
+    commands:
+      - glide install
+      - go build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  type: zip
+  files:
+    - oshirase
