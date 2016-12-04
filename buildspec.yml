@@ -25,7 +25,7 @@ phases:
       - zip oshirase.zip oshirase
 
 
-  artifacts:
-    type: zip
-    files:
-      - oshirase.zip
+artifacts:
+  type: zip
+  files:
+    - oshirase.zip
