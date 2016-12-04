@@ -16,6 +16,7 @@ phases:
       - echo prebuildend
   build:
     commands:
+      - hoge -a
       - echo buildstrat
       - glide install
       - go build
