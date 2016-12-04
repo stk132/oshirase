@@ -28,4 +28,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - oshirase.zip
+    - ./oshirase.zip
