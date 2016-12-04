@@ -19,7 +19,6 @@ phases:
       - echo buildstrat
       - glide install
       - go build
-      - zip oshirase.zip oshirase
   post_build:
     commands:
       - echo Build completed on `date`
@@ -28,4 +27,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - ./oshirase.zip
+    - oshirase
