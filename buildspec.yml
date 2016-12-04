@@ -11,9 +11,12 @@ phases:
       - curl https://glide.sh/get | sh
   pre-build:
     commands:
+      - echo prebuildstart
       - PATH=$PATH:$GOPATH/bin
+      - echo prebuildend
   build:
     commands:
+      - echo buildstrat
       - glide install
       - go build
   post_build:
