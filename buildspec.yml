@@ -22,9 +22,10 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      
-#
-# artifacts:
-#   type: zip
-#   files:
-#     - oshirase
+      - zip oshirase.zip oshirase
+
+
+  artifacts:
+    type: zip
+    files:
+      - oshirase.zip
